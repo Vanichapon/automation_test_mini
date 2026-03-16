@@ -6,7 +6,7 @@ test('R00020', async ({ page }) => {
     await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
     await page.getByText('ตั้งค่า').click();
     await expect(page).toHaveURL(/settings/);
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00020/R00020-1.png', fullPage: true });
+    await page.screenshot({ path: './image/R00020/R00020-1.png', fullPage: true });
     await page.fill('#username', 'TestTeam2');
     await page.fill('#email', 'test2@domain.com');
     await page.fill('#new_password', 'NewPass@1234');
@@ -14,5 +14,5 @@ test('R00020', async ({ page }) => {
     await page.fill('#current_password', 'Test@123456');
     await page.getByRole('button', { name: ' บันทึกการเปลี่ยนแปลง' }).click();
     await expect(page.getByText('บันทึกการเปลี่ยนแปลงเรียบร้อยแล้ว!')).toBeVisible();
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00020/R00020-2.png', fullPage: true });
+    await page.screenshot({ path: './image/R00020/R00020-2.png', fullPage: true });
 });

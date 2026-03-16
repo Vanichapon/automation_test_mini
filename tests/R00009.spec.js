@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 test('R00009', async ({ page }) => {
     await page.goto('https://computer.surin.rmuti.ac.th/certificate/project/register_user.php');
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00009/R00009-1.png', fullPage: true });
+    await page.screenshot({ path: './image/R00009/R00009-1.png', fullPage: true });
     await page.fill('#username', 'TestTeam2');
     await page.fill('#email', 'test02@domain.com');
     await page.fill('#password', '1234');
     await page.fill('#confirm_password', '1234');
     await page.getByRole('button', { name: 'สมัครสมาชิก' }).click();
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00009/R00009-2.png', fullPage: true });
+    await page.screenshot({ path: './image/R00009/R00009-2.png', fullPage: true });
 });

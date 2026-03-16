@@ -6,9 +6,9 @@ test('R00023', async ({ page }) => {
     await page.getByRole('button', { name: 'เข้าสู่ระบบ' }).click();
     await page.getByText('เกียรติบัตร').click();
     await expect(page).toHaveURL(/certificate/);
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00023/R00023-1.png', fullPage: true });
+    await page.screenshot({ path: './image/R00023/R00023-1.png', fullPage: true });
     await page.getByPlaceholder('กรุณากรอกชื่อ-นามสกุล').fill('จิรวัฒน์');
     await page.getByRole('button', { name: 'ค้นหาเกียรติบัตร' }).click();
     await expect(page.locator('.swal2-popup')).toBeVisible();
-    await page.screenshot({ path: 'C:/automation_test_mini/image/R00023/R00023-2.png', fullPage: true });
+    await page.screenshot({ path: './image/R00023/R00023-2.png', fullPage: true });
 });
